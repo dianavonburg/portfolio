@@ -4,209 +4,290 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diana Von Burg • Portfolio</title>
+  <meta name="description" content="Diana Von Burg — creator, designer, and entrepreneur blending innovation, art, and storytelling. Design • Photography • Videography • Product Innovation." />
+  <!-- Bootstrap, Fonts, Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="description" content="Diana Von Burg — creator, designer, and entrepreneur blending innovation, art, and storytelling. Design • Photography • Videography • Product Innovation." />
 </head>
 <body>
-  <header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <nav>
-        <div class="brand">
-          <img src="assets/images/avatar.png" alt="Avatar of Diana Von Burg" />
-          <div>Diana Von Burg</div>
-        </div>
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#photography">Photography</a>
-          <a href="#videography">Videography</a>
-          <a href="#resume">Resume</a>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="#home">Diana Von Burg</a>
+      <button class="navbar-toggler" type="button" data-bs-togg  <main>
+    <!-- About -->
+r-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#photography">Photography</a></li>
+          <li class="nav-item"><a class="nav-link" href="#videography">Videography</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="Diana_Von_Burg_Resume%202025.pdf" target="_blank"><i class="fas fa-download me-1"></i>Resume</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <!-- Hero -->
-<section class="hero" id="top">
-      <div class="avatar thumb"><img src="assets/images/avatar.png" alt="Avatar of Diana Von Burg"></div>
-      <div>
-        <h1>Hi, I'm Diana — <span class="typed" id="typed"></span><span class="caret">|</span></h1>
-        <p>I blend industrial engineering with design, photography, and content creation — building things that are precise, useful, and beautiful.</p>
-        <div class="chips">
-          <span class="chip">Product Design & 3D Printing</span>
-          <span class="chip">Photography</span>
-          <span class="chip">Videography & Editing</span>
-          <span class="chip">Spanish • Portuguese • English</span>
+  <!-- Hero -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span id="typedName">Diana Von Burg</span><span class="typing-cursor">|</span></h1>
+            <h2 class="hero-subtitle">Creator • Designer • Storyteller</h2>
+            <p class="hero-description">I blend industrial engineering with design, photography, and content creation — building things that are precise, useful, and beautiful.</p>
+            <div class="hero-buttons">
+              <a href="#work" class="btn btn-light text-dark fw-bold me-2">View My Work</a>
+              <a href="#contact" class="btn btn-outline-light fw-bold">Get In Touch</a>
+            </div>
+          </div>
         </div>
-        <div class="cta">
-          <a class="btn primary" href="#work">View My Work</a>
-          <a class="btn ghost" href="#contact">Get In Touch</a>
+        <div class="col-lg-6 text-center d-none d-lg-block">
+          <div class="thumb" style="max-width:360px;margin:0 auto;">
+            <img src="assets/images/avatar.png" alt="Avatar of Diana" style="height:360px; object-fit:contain; background:#fff;">
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="card">
-        <p>I’m Diana Von Burg — a creator, designer, and entrepreneur passionate about blending innovation, art, and storytelling. With a background in industrial engineering and years of hands-on experience in design, photography, and content creation, I’ve built projects that combine technical precision with creativity.</p>
-        <p><strong>Gatillo Design.</strong> As the founder of Gatillo Design, I engineered and 3D-printed the <em>Ultimate Adapter</em> for circular knitting machines (Addi & Centro). This product converts manual machines into motorized tools — improving speed and finish. I craft installation manuals, line-art diagrams, and video tutorials that document the process from concept to product.</p>
-        <p><strong>Content Creation.</strong> I run two YouTube channels: <em>Knitting with Diana</em> (tutorials, patterns, innovation) and <em>Yoga con Diana</em> (yoga, pranayama, and meditation). I’m also a visual storyteller — scripting, filming, and editing videos that feel authentic and visually striking.</p>
-        <p><strong>Skills & Tools:</strong> Fusion 360, 3D printing, photography, videography, Photoshop, Lightroom, Premiere Pro, DaVinci Resolve, Canva, FinalCut, Keynote. Bilingual: Spanish (native), Portuguese (fluent), English (fluent).</p>
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Blending innovation, art, and storytelling</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <div class="about-content">
+              <p class="lead">I’m Diana Von Burg — a creator, designer, and entrepreneur with a background in industrial engineering. I combine technical precision with creativity across product design, photography, and visual storytelling.</p>
+              <p><strong>Gatillo Design.</strong> I engineered and 3D‑printed the <em>Ultimate Adapter</em> for circular knitting machines (Addi & Centro), converting manual machines into motorized tools. I design installation manuals, line‑art diagrams, and demo videos end‑to‑end.</p>
+              <p><strong>Content Creation.</strong> I run two channels — <em>Knitting with Diana</em> and <em>Yoga con Diana</em> — focused on tutorials, patterns, yoga, and meditation. I script, film, and edit polished videos that feel authentic and engaging.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6"><div class="thumb"><img src="assets/images/sfo-city.jpg" alt="City"></div></div>
+              <div class="col-6"><div class="thumb"><img src="assets/images/sunset-beach.jpg" alt="Beach"></div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Work Highlights -->
-    <section id="work">
-      <h2 class="section-title">Selected Work</h2>
-      <div class="grid cols-3">
-        <!-- Gatillo Design -->
-        <div class="item card">
-          <div class="thumb"><img src="assets/images/gatillo-logo.png" alt="Gatillo Designs logo"></div>
-          <h3>Ultimate Adapter • Gatillo Design</h3>
-          <p>3D-printed adapter converting circular knitting machines into motorized tools. Process docs, manuals, and demo videos included.</p>
+    <section id="work" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title">Selected Work</h2>
+            <p class="section-subtitle">Product Design • Photography • Videography</p>
+          </div>
         </div>
-        <!-- Product Clip -->
-        <div class="item card">
-          <div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div>
-          <h3>Product Motion • Prototype Clip</h3>
-          <p>Short engineering motion clip documenting mechanical behavior and result.</p>
-        </div>
-        <!-- City photo as visual storytelling feel -->
-        <div class="item card">
-          <div class="thumb"><img src="assets/images/sfo-city.jpg" alt="San Francisco city photography by Diana"></div>
-          <h3>Visual Storytelling • City</h3>
-          <p>Photography that focuses on narrative and mood — composition, color, and timing.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card project-card h-100">
+              <img src="assets/images/gatillo-logo.png" class="card-img-top" alt="Gatillo Design">
+              <div class="card-body">
+                <h5 class="card-title">Ultimate Adapter — Gatillo Design</h5>
+                <p class="card-text">3D‑printed adapter converting circular knitting machines into motorized tools. Manuals, line‑art, and demo videos.</p>
+                <span class="tech-tag">Fusion 360</span>
+                <span class="tech-tag">3D Printing</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card project-card h-100">
+              <div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div>
+              <div class="card-body">
+                <h5 class="card-title">Product Motion • Prototype Clip</h5>
+                <p class="card-text">Concise demo communicating mechanism and outcome.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card project-card h-100">
+              <img src="assets/images/sfo-city.jpg" class="card-img-top" alt="City">
+              <div class="card-body">
+                <h5 class="card-title">Visual Storytelling • City</h5>
+                <p class="card-text">Photography focused on narrative, composition, and color.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Photography -->
-    <section id="photography">
-      <h2 class="section-title">Photography</h2>
-      <div class="grid cols-2">
-        <div class="item card">
-          <div class="thumb"><img src="assets/images/sfo-city.jpg" alt="San Francisco city tram"></div>
-          <h3>City Lines</h3>
-          <p>Framing movement and light for strong urban narratives.</p>
+    <section id="photography" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title">Photography</h2>
+            <p class="section-subtitle">Narratives through composition and light</p>
+          </div>
         </div>
-        <div class="item card">
-          <div class="thumb"><img src="assets/images/sunset-beach.jpg" alt="Sunset beach landscape"></div>
-          <h3>Sunset Beach</h3>
-          <p>Minimal palettes and calm textures — emotional simplicity.</p>
+        <div class="row">
+          <div class="col-md-6 mb-4"><div class="thumb"><img src="assets/images/sfo-city.jpg" alt="City"></div></div>
+          <div class="col-md-6 mb-4"><div class="thumb"><img src="assets/images/sunset-beach.jpg" alt="Beach"></div></div>
         </div>
       </div>
     </section>
 
     <!-- Videography -->
-    <section id="videography">
-      <h2 class="section-title">Videography</h2>
-      <div class="grid cols-3">
-        <div class="item card">
-          <div class="thumb"><video src="assets/video/yoga-intro.mp4" controls></video></div>
-          <h3>Yoga Intro</h3>
-          <p>Intro segment for Yoga con Diana — breath, presence, rhythm.</p>
+    <section id="videography" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title">Videography</h2>
+            <p class="section-subtitle">Selected cuts and reels</p>
+          </div>
         </div>
-        <div class="item card">
-          <div class="thumb"><video src="assets/video/wine-anarchist.mp4" controls></video></div>
-          <h3>Brand Teaser</h3>
-          <p>Quick vertical reel — cut, color, pacing for social impact.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4"><div class="thumb"><video src="assets/video/yoga-intro.mp4" controls></video></div></div>
+          <div class="col-lg-4 col-md-6 mb-4"><div class="thumb"><video src="assets/video/wine-anarchist.mp4" controls></video></div></div>
+          <div class="col-lg-4 col-md-6 mb-4"><div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div></div>
         </div>
-        <div class="item card">
-          <div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div>
-          <h3>Product Demo</h3>
-          <p>Concise, functional demo communicating mechanism and outcome.</p>
-        </div>
+        <div class="text-center"><a href="assets/video/yoga-intro.mp4" target="_blank" class="btn btn-outline-dark me-2">Yoga Intro</a><a href="assets/video/wine-anarchist.mp4" target="_blank" class="btn btn-outline-dark me-2">Brand Teaser</a><a href="assets/video/adapter-clip.mp4" target="_blank" class="btn btn-outline-dark">Product Demo</a></div>
       </div>
-      <p class="card" style="margin-top:12px">Prefer opening videos separately? <a href="assets/video/yoga-intro.mp4" target="_blank" rel="noopener">Yoga Intro</a> · <a href="assets/video/wine-anarchist.mp4" target="_blank" rel="noopener">Brand Teaser</a> · <a href="assets/video/adapter-clip.mp4" target="_blank" rel="noopener">Product Demo</a></p>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="card skills">
-        <span class="skill">Fusion 360</span>
-        <span class="skill">3D Printing</span>
-        <span class="skill">Illustration & Line Art</span>
-        <span class="skill">Photography</span>
-        <span class="skill">Videography</span>
-        <span class="skill">Premiere Pro</span>
-        <span class="skill">DaVinci Resolve</span>
-        <span class="skill">Photoshop</span>
-        <span class="skill">Lightroom</span>
-        <span class="skill">Canva</span>
-        <span class="skill">Final Cut</span>
-        <span class="skill">Keynote</span>
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Tools, platforms, and creative strengths</p>
+          </div>
+        </div>
+        <div class="row" id="skillsContainer">
+          <div class="col-lg-3 col-md-6 mb-4"><div class="skill-category"><h4>Design</h4><div><span class="skill-tag">Fusion 360</span><span class="skill-tag">3D Printing</span><span class="skill-tag">Illustration</span></div></div></div>
+          <div class="col-lg-3 col-md-6 mb-4"><div class="skill-category"><h4>Visual</h4><div><span class="skill-tag">Photography</span><span class="skill-tag">Videography</span></div></div></div>
+          <div class="col-lg-3 col-md-6 mb-4"><div class="skill-category"><h4>Editing</h4><div><span class="skill-tag">Premiere Pro</span><span class="skill-tag">DaVinci Resolve</span><span class="skill-tag">Photoshop</span><span class="skill-tag">Lightroom</span></div></div></div>
+          <div class="col-lg-3 col-md-6 mb-4"><div class="skill-category"><h4>Other</h4><div><span class="skill-tag">Canva</span><span class="skill-tag">Final Cut</span><span class="skill-tag">Keynote</span><span class="skill-tag">Spanish • Portuguese • English</span></div></div></div>
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="exp">
-          <div class="role">Founder & Product Designer — Gatillo Design</div>
-          <div class="meta">San Francisco Bay Area • 2023 — Present</div>
-          <p>Designed and manufactured the Ultimate Adapter for Addi & Centro circular knitting machines. Produced installation manuals, line-art diagrams, and demo videos.</p>
+    <section id="experience" class="section-padding bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">Design, content, and instruction</p>
+          </div>
         </div>
-        <div class="exp">
-          <div class="role">Content Creator — Knitting with Diana</div>
-          <div class="meta">YouTube • 2022 — Present</div>
-          <p>Tutorials, patterns, and product innovations for makers. Storytelling through practical, polished visuals.</p>
-        </div>
-        <div class="exp">
-          <div class="role">Yoga Instructor — Yoga con Diana</div>
-          <div class="meta">YouTube • 2022 — Present</div>
-          <p>Yoga, pranayama, and meditation content designed to inspire balance and awareness.</p>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="experience-card h-100">
+              <div class="experience-header">
+                <div class="company-logo"><i class="fas fa-gears"></i></div>
+                <div>
+                  <h4 class="company-name">Gatillo Design</h4>
+                  <h5 class="job-title">Founder & Product Designer</h5>
+                  <span class="job-period">2023 — Present • Bay Area</span>
+                </div>
+              </div>
+              <ul class="experience-achievements">
+                <li>Engineered the Ultimate Adapter for Addi & Centro machines</li>
+                <li>Designed installation manuals and line‑art diagrams</li>
+                <li>Produced demo/tutorial videos and support assets</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="experience-card h-100">
+              <div class="experience-header">
+                <div class="company-logo"><i class="fab fa-youtube"></i></div>
+                <div>
+                  <h4 class="company-name">Knitting with Diana</h4>
+                  <h5 class="job-title">Content Creator</h5>
+                  <span class="job-period">2022 — Present</span>
+                </div>
+              </div>
+              <ul class="experience-achievements">
+                <li>Tutorials, patterns, and product innovations</li>
+                <li>Planning, scripting, filming, and editing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="experience-card h-100">
+              <div class="experience-header">
+                <div class="company-logo"><i class="fas fa-spa"></i></div>
+                <div>
+                  <h4 class="company-name">Yoga con Diana</h4>
+                  <h5 class="job-title">Yoga Instructor</h5>
+                  <span class="job-period">2022 — Present</span>
+                </div>
+              </div>
+              <ul class="experience-achievements">
+                <li>Yoga, pranayama, and meditation content</li>
+                <li>Focused on balance, awareness, and strength</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Resume -->
-    <section id="resume">
-      <h2 class="section-title">Resume</h2>
-      <div class="card">
-        <p>For a detailed overview of my background and experience, view or download my resume.</p>
-        <p><a class="btn primary" href="Diana_Von_Burg_Resume%202025.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a></p>
+    <section id="resume" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-3">
+            <h2 class="section-title">Resume</h2>
+            <p><a class="btn btn-dark fw-bold" href="Diana_Von_Burg_Resume%202025.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf me-2"></i>Open Resume (PDF)</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="card">
-        <p>Interested in collaborating or learning more about my work?</p>
-        <p><a class="btn ghost" href="mailto:dianagvonburg@gmail.com">dianagvonburg@gmail.com</a></p>
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Interested in collaborating or viewing more work?</p>
+            <p><a class="btn btn-outline-dark fw-bold" href="mailto:dianagvonburg@gmail.com">dianagvonburg@gmail.com</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">© <span id="y"></span> Diana Von Burg • Design · Photography · Videography · Innovation</div>
+  <footer class="bg-light">
+    <div class="container text-center">© <span id="y"></span> Diana Von Burg • Design · Photography · Videography · Innovation</div>
   </footer>
   <script>
-    // inline tiny script: year + typed rotating roles
     document.getElementById('y').textContent = new Date().getFullYear();
-    const roles = [
-      'Designer',
-      'Photographer',
-      'Videographer',
-      'Product Innovator',
-      'Storyteller'
-    ];
-    let idx = 0; let pos = 0; let typing = true; const el = document.getElementById('typed');
-    function tick(){
-      const word = roles[idx];
-      if(typing){ pos++; if(pos>=word.length){ typing=false; setTimeout(tick, 900); return; } }
-      else { pos--; if(pos<=0){ typing=true; idx=(idx+1)%roles.length; } }
-      el.textContent = word.slice(0,pos);
-      setTimeout(tick, typing? 70 : 40);
-    }
-    tick();
+    // Type name effect like reference site
+    (function(){
+      const nameText = 'Diana Von Burg';
+      const nameEl = document.getElementById('typedName');
+      const cursorEls = document.getElementsByClassName('typing-cursor');
+      if(!nameEl) return;
+      let idx=0; nameEl.textContent='';
+      const blink = setInterval(()=>{ for(const c of cursorEls){ c.style.opacity = c.style.opacity==='0'?'1':'0'; } }, 530);
+      (function type(){ if(idx < nameText.length){ nameEl.textContent += nameText.charAt(idx++); setTimeout(type, 140);} else { setTimeout(()=>{ clearInterval(blink); for(const c of cursorEls){ c.style.opacity='0'; } }, 1400);} })();
+    })();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
