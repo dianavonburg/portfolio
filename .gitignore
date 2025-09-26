@@ -50,6 +50,9 @@ build/
 *.webm
 *.m4v
 
+# Allow optimized site videos in tracked folder
+!assets/video/*.mp4
+
 # Large image files
 *.psd
 *.ai
