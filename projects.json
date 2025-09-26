@@ -1,0 +1,40 @@
+{
+  "skills": {
+    "Design": ["Fusion 360", "3D Printing", "Illustration"],
+    "Visual": ["Photography", "Videography"],
+    "Editing": ["Premiere Pro", "DaVinci Resolve", "Photoshop", "Lightroom"],
+    "Other": ["Canva", "Final Cut", "Keynote", "Spanish • Portuguese • English"]
+  },
+  "projects": [
+    {
+      "id": "ultimate-adapter",
+      "title": "Ultimate Adapter — Gatillo Design",
+      "category": "Product Design",
+      "description": "3D-printed adapter converting circular knitting machines (Addi & Centro) into motorized tools. Manuals, line-art, and demo videos.",
+      "tech_stack": ["Fusion 360", "PLA", "3D Printing"],
+      "github_url": "",
+      "highlights": ["Engineered functional adapter", "Documentation and diagrams", "User-focused installation guide"],
+      "image": "assets/images/gatillo-logo.png"
+    },
+    {
+      "id": "yoga-intro",
+      "title": "Yoga Intro Reel",
+      "category": "Videography",
+      "description": "Intro segment for Yoga con Diana — breath, presence, rhythm.",
+      "tech_stack": ["Filming", "Editing"],
+      "github_url": "",
+      "highlights": ["Cinematic lighting", "Mood and tone"],
+      "image": "assets/video/yoga-intro.mp4"
+    },
+    {
+      "id": "city-photo",
+      "title": "City Story — Photography",
+      "category": "Photography",
+      "description": "Urban narrative showcasing composition and light.",
+      "tech_stack": ["Lightroom", "Color"],
+      "github_url": "",
+      "highlights": ["Timing and framing"],
+      "image": "assets/images/sfo-city.jpg"
+    }
+  ]
+}
