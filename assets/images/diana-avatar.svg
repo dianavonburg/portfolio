@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="480" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fee8d5"/>
+      <stop offset="1" stop-color="#fdd0b6"/>
+    </linearGradient>
+    <linearGradient id="denim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f3b73"/>
+      <stop offset="1" stop-color="#0f2a5a"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe6ff"/>
+      <stop offset="1" stop-color="#9dc3f9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropshadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <g fill="none" stroke="none">
+    <rect width="640" height="480" fill="none"/>
+    <ellipse cx="420" cy="400" rx="160" ry="40" fill="#000000" fill-opacity="0.18"/>
+    <g filter="url(#dropshadow)">
+      <!-- Trousers / skirt silhouette -->
+      <path d="M264,248 h112 l-12,102 h-88z" fill="url(#denim)"/>
+      <path d="M260,340 h120 v48 a12,12 0 0 1 -12,12 h-96 a12,12 0 0 1 -12,-12z" fill="url(#denim)"/>
+      <!-- Shirt / blouse -->
+      <rect x="280" y="160" width="88" height="96" rx="18" fill="url(#top)"/>
+      <!-- Head -->
+      <circle cx="324" cy="132" r="36" fill="url(#skin)"/>
+      <!-- Hair / simplified -->
+      <path d="M356,136c0-26-18-48-44-48s-44 22-44 48c0,4 0,8 1,12h86c1-4 1-8 1-12z" fill="#0b0f1a"/>
+      <!-- Collar accent -->
+      <rect x="304" y="240" width="40" height="28" rx="10" fill="url(#top)"/>
+      <!-- Eyes + smile -->
+      <circle cx="304" cy="132" r="3" fill="#0b0f1a"/>
+      <circle cx="344" cy="132" r="3" fill="#0b0f1a"/>
+      <path d="M312 148c8 8 24 8 32 0" stroke="#0b0f1a" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <!-- Soft light glow -->
+    <circle cx="530" cy="60" r="140" fill="url(#glow)"/>
+  </g>
+</svg>
