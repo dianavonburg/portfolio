@@ -1,45 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Diana!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        .coming-soon {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diana Von Burg • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Diana Von Burg — creator, designer, and entrepreneur blending innovation, art, and storytelling. Design • Photography • Videography • Product Innovation." />
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <div class="subtitle">Diana Von Burg's Portfolio</div>
-    <div class="coming-soon">
-        <p>🎨 Creative Portfolio Coming Soon 🎨</p>
-        <p>Design • Photography • Videography • Innovation</p>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <img src="assets/images/avatar.png" alt="Avatar of Diana Von Burg" />
+          <div>Diana Von Burg</div>
+        </div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#photography">Photography</a>
+          <a href="#videography">Videography</a>
+          <a href="#resume">Resume</a>
+        </div>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="avatar thumb"><img src="assets/images/avatar.png" alt="Avatar of Diana Von Burg"></div>
+      <div>
+        <h1>Creator • Designer • Storyteller</h1>
+        <p>I blend industrial engineering with design, photography, and content creation — building things that are precise, useful, and beautiful.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work">Explore My Work</a>
+          <a class="btn ghost" href="#resume">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="card">
+        <p>I’m Diana Von Burg — a creator, designer, and entrepreneur passionate about blending innovation, art, and storytelling. With a background in industrial engineering and years of hands-on experience in design, photography, and content creation, I’ve built projects that combine technical precision with creativity.</p>
+        <p><strong>Gatillo Design.</strong> As the founder of Gatillo Design, I engineered and 3D-printed the <em>Ultimate Adapter</em> for circular knitting machines (Addi & Centro). This product converts manual machines into motorized tools — improving speed and finish. I craft installation manuals, line-art diagrams, and video tutorials that document the process from concept to product.</p>
+        <p><strong>Content Creation.</strong> I run two YouTube channels: <em>Knitting with Diana</em> (tutorials, patterns, innovation) and <em>Yoga con Diana</em> (yoga, pranayama, and meditation). I’m also a visual storyteller — scripting, filming, and editing videos that feel authentic and visually striking.</p>
+        <p><strong>Skills & Tools:</strong> Fusion 360, 3D printing, photography, videography, Photoshop, Lightroom, Premiere Pro, DaVinci Resolve, Canva, FinalCut, Keynote. Bilingual: Spanish (native), Portuguese (fluent), English (fluent).</p>
+      </div>
+    </section>
+
+    <!-- Work Highlights -->
+    <section id="work">
+      <h2 class="section-title">Selected Work</h2>
+      <div class="grid cols-3">
+        <!-- Gatillo Design -->
+        <div class="item card">
+          <div class="thumb"><img src="assets/images/gatillo-logo.png" alt="Gatillo Designs logo"></div>
+          <h3>Ultimate Adapter • Gatillo Design</h3>
+          <p>3D-printed adapter converting circular knitting machines into motorized tools. Process docs, manuals, and demo videos included.</p>
+        </div>
+        <!-- Product Clip -->
+        <div class="item card">
+          <div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div>
+          <h3>Product Motion • Prototype Clip</h3>
+          <p>Short engineering motion clip documenting mechanical behavior and result.</p>
+        </div>
+        <!-- City photo as visual storytelling feel -->
+        <div class="item card">
+          <div class="thumb"><img src="assets/images/sfo-city.jpg" alt="San Francisco city photography by Diana"></div>
+          <h3>Visual Storytelling • City</h3>
+          <p>Photography that focuses on narrative and mood — composition, color, and timing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography -->
+    <section id="photography">
+      <h2 class="section-title">Photography</h2>
+      <div class="grid cols-2">
+        <div class="item card">
+          <div class="thumb"><img src="assets/images/sfo-city.jpg" alt="San Francisco city tram"></div>
+          <h3>City Lines</h3>
+          <p>Framing movement and light for strong urban narratives.</p>
+        </div>
+        <div class="item card">
+          <div class="thumb"><img src="assets/images/sunset-beach.jpg" alt="Sunset beach landscape"></div>
+          <h3>Sunset Beach</h3>
+          <p>Minimal palettes and calm textures — emotional simplicity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videography -->
+    <section id="videography">
+      <h2 class="section-title">Videography</h2>
+      <div class="grid cols-3">
+        <div class="item card">
+          <div class="thumb"><video src="assets/video/yoga-intro.mp4" controls></video></div>
+          <h3>Yoga Intro</h3>
+          <p>Intro segment for Yoga con Diana — breath, presence, rhythm.</p>
+        </div>
+        <div class="item card">
+          <div class="thumb"><video src="assets/video/wine-anarchist.mp4" controls></video></div>
+          <h3>Brand Teaser</h3>
+          <p>Quick vertical reel — cut, color, pacing for social impact.</p>
+        </div>
+        <div class="item card">
+          <div class="thumb"><video src="assets/video/adapter-clip.mp4" controls></video></div>
+          <h3>Product Demo</h3>
+          <p>Concise, functional demo communicating mechanism and outcome.</p>
+        </div>
+      </div>
+      <p class="card" style="margin-top:12px">Prefer opening videos separately? <a href="assets/video/yoga-intro.mp4" target="_blank" rel="noopener">Yoga Intro</a> · <a href="assets/video/wine-anarchist.mp4" target="_blank" rel="noopener">Brand Teaser</a> · <a href="assets/video/adapter-clip.mp4" target="_blank" rel="noopener">Product Demo</a></p>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <h2 class="section-title">Resume</h2>
+      <div class="card">
+        <p>For a detailed overview of my background and experience, view or download my resume.</p>
+        <p><a class="btn primary" href="Diana_Von_Burg_Resume%202025.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Diana Von Burg • Design · Photography · Videography · Innovation</div>
+  </footer>
+  <script>
+    // inline tiny script just to set the year without additional files
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
