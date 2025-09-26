@@ -91,3 +91,14 @@ footer { background:#f5f7fb; color: var(--text-light); padding: 32px 0; }
 /* Typing cursor */
 .typing-cursor { color:#fff; margin-left:2px; animation: blink 1.2s infinite; }
 @keyframes blink { 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
+
+/* Experience enhancements */
+.xp-statbar { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; margin-bottom:1.25rem; }
+.xp-stat { background:#fff; border:1px solid #e5e7eb; border-radius:999px; padding:.4rem .85rem; font-weight:600; font-size:.85rem; color:#374151; box-shadow: var(--shadow); }
+.xp-meta { display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 0; }
+.xp-chip { display:inline-block; background:#f3f4f6; color:#374151; padding:.35rem .75rem; border-radius:999px; font-size:.8rem; font-weight:600; border:1px solid #e5e7eb; }
+.xp-cta-group { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.75rem; }
+.btn-gradient { background: var(--gradient); color:#fff; border:none; }
+.btn-gradient:hover { background: var(--gradient-alt); color:#fff; transform: translateY(-1px); }
+.btn-soft { background:#f8fafc; color:#111827; border:1px solid #e5e7eb; }
+.btn-soft:hover { background:#fff; }
