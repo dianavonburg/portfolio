@@ -77,33 +77,37 @@
             <p class="section-subtitle">Blending innovation, art, and storytelling</p>
           </div>
         </div>
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4">
+        <!-- Row 1: text left, image right -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="about-content">
-              <p class="lead">I’m Diana Von Burg — a creator, designer, and entrepreneur with a background in industrial engineering. I combine technical precision with creativity across product design, photography, and visual storytelling.</p>
+              <p class="about-intro">I’m Diana Von Burg — a creator, designer, and entrepreneur with a background in industrial engineering. I combine technical precision with creativity across product design, photography, and visual storytelling.</p>
               <p><strong>Gatillo Design.</strong> I engineered and 3D‑printed the <em>Ultimate Adapter</em> for circular knitting machines (Addi & Centro), converting manual machines into motorized tools. I design installation manuals, line‑art diagrams, and demo videos end‑to‑end.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure class="media-frame about-figure">
+              <a href="photography/SFO%20CITY-1.jpg" target="_blank" rel="noopener">
+                <img src="assets/images/sfo-city.jpg" alt="San Francisco cable car on Market Street at dusk">
+              </a>
+              <figcaption class="media-caption">San Francisco — Market Street cable car</figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- Row 2: image left, text right -->
+        <div class="row align-items-center flex-lg-row-reverse">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="about-content">
               <p><strong>Content Creation.</strong> I run two channels — <em>Knitting with Diana</em> and <em>Yoga con Diana</em> — focused on tutorials, patterns, yoga, and meditation. I script, film, and edit polished videos that feel authentic and engaging.</p>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="row g-3">
-              <div class="col-6">
-                <figure class="media-frame">
-                  <a href="photography/SFO%20CITY-1.jpg" target="_blank" rel="noopener">
-                    <img src="assets/images/sfo-city.jpg" alt="San Francisco cable car on Market Street at dusk">
-                  </a>
-                  <figcaption class="media-caption">San Francisco — Market Street cable car</figcaption>
-                </figure>
-              </div>
-              <div class="col-6">
-                <figure class="media-frame">
-                  <a href="photography/Sunset%20beach-13.jpg" target="_blank" rel="noopener">
-                    <img src="assets/images/sunset-beach.jpg" alt="Gentle waves during a Pacifica sunset">
-                  </a>
-                  <figcaption class="media-caption">Pacifica — gentle waves at sunset</figcaption>
-                </figure>
-              </div>
-            </div>
+            <figure class="media-frame about-figure">
+              <a href="photography/Sunset%20beach-13.jpg" target="_blank" rel="noopener">
+                <img src="assets/images/sunset-beach.jpg" alt="Gentle waves during a Pacifica sunset">
+              </a>
+              <figcaption class="media-caption">Pacifica — gentle waves at sunset</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -224,31 +228,49 @@
             <p class="section-subtitle">Tools, platforms, and creative strengths</p>
           </div>
         </div>
-        <div class="row" id="skillsContainer">
-          <div class="col-lg-6 col-md-12 mb-4">
-            <div class="skill-category"><h4>Hard Skills</h4>
+        <div class="row skills-grid" id="skillsContainer">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-palette me-2"></i>Core Creative Suite</h4>
               <div>
-                <span class="skill-tag">Keynote</span>
                 <span class="skill-tag">Adobe Photoshop</span>
                 <span class="skill-tag">Adobe Illustrator</span>
-                <span class="skill-tag">After Effects</span>
+                <span class="skill-tag">Lightroom</span>
                 <span class="skill-tag">Acrobat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-film me-2"></i>Video & Motion</h4>
+              <div>
                 <span class="skill-tag">Premiere Pro</span>
-                <span class="skill-tag">DaVinci Resolve</span>
                 <span class="skill-tag">Final Cut Pro</span>
+                <span class="skill-tag">DaVinci Resolve</span>
+                <span class="skill-tag">After Effects</span>
                 <span class="skill-tag">CapCut</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-cubes me-2"></i>3D & CAD</h4>
+              <div>
                 <span class="skill-tag">Autodesk Inventor</span>
                 <span class="skill-tag">Rhino</span>
                 <span class="skill-tag">Siemens NX</span>
                 <span class="skill-tag">3D Modeling</span>
-                <span class="skill-tag">Data Collection</span>
-                <span class="skill-tag">Photography</span>
-                <span class="skill-tag">Documentation</span>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 mb-4">
-            <div class="skill-category"><h4>Soft Skills</h4>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-file-alt me-2"></i>Documentation & Data</h4>
+              <div>
+                <span class="skill-tag">Keynote</span>
+                <span class="skill-tag">Documentation</span>
+                <span class="skill-tag">Data Collection</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-users me-2"></i>Soft Skills</h4>
               <div>
                 <span class="skill-tag">Creative Storytelling</span>
                 <span class="skill-tag">Attention to Detail & Quality Control</span>
@@ -261,8 +283,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 mb-4">
-            <div class="skill-category"><h4>Languages</h4>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="skill-category"><h4><i class="fas fa-language me-2"></i>Languages</h4>
               <div>
                 <span class="skill-tag">Spanish (Native)</span>
                 <span class="skill-tag">English (Fluent)</span>
@@ -466,37 +488,6 @@
               </div>
               <div class="xp-cta-group">
                 <a class="btn btn-outline-dark btn-sm" href="assets/video/wine-anarchist.mp4" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Open Brand Reel</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-4">
-            <h2 class="section-title">Education</h2>
-            <p class="section-subtitle">Foundations that shape my craft</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="experience-card">
-              <div class="experience-header">
-                <div class="company-logo"><i class="fas fa-graduation-cap"></i></div>
-                <div>
-                  <h4 class="company-name">B.S. Industrial Engineering</h4>
-                  <h5 class="job-title">Fundación Universitaria de Popayán, Colombia</h5>
-                  <span class="job-period">Completed</span>
-                </div>
-              </div>
-              <div class="xp-meta">
-                <span class="xp-chip">Process Improvement</span>
-                <span class="xp-chip">Quality Control</span>
-                <span class="xp-chip">Technical Documentation</span>
               </div>
             </div>
           </div>
