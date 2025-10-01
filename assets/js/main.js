@@ -76,53 +76,34 @@ function initializeAnimations(){ const opts={threshold:.1, rootMargin:'0px 0px -
 function initializeTypingAnimation() {
   const words = ['Creator', 'Designer', 'Storyteller'];
   const textEl = document.getElementById('typedText');
-  const cursor = document.getElementById('cursor');
   
-  if (!textEl || !cursor) {
-    console.log('Elements not found: typedText or cursor');
+  if (!textEl) {
+    console.log('typedText element not found');
     return;
   }
   
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+  let currentWordIndex = 0;
   
-  function typeEffect() {
-    const currentWord = words[wordIndex];
+  function cycleWords() {
+    // Fade out
+    textEl.style.opacity = '0';
     
-    if (isDeleting) {
-      // Deleting characters
-      textEl.textContent = currentWord.substring(0, charIndex - 1);
-      charIndex--;
+    setTimeout(() => {
+      // Change text
+      textEl.textContent = words[currentWordIndex];
+      currentWordIndex = (currentWordIndex + 1) % words.length;
       
-      if (charIndex === 0) {
-        // Finished deleting, move to next word
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeEffect, 500); // Brief pause before starting next word
-        return;
-      }
-    } else {
-      // Typing characters
-      textEl.textContent = currentWord.substring(0, charIndex + 1);
-      charIndex++;
-      
-      if (charIndex === currentWord.length) {
-        // Finished typing word, pause then start deleting
-        setTimeout(() => {
-          isDeleting = true;
-          typeEffect();
-        }, 2000);
-        return;
-      }
-    }
-    
-    const speed = isDeleting ? 50 : 100;
-    setTimeout(typeEffect, speed);
+      // Fade in
+      textEl.style.opacity = '1';
+    }, 300);
   }
   
-  // Start the animation after a brief delay
-  setTimeout(typeEffect, 1000);
+  // Add smooth transition
+  textEl.style.transition = 'opacity 0.3s ease';
+  textEl.textContent = words[0];
+  
+  // Start cycling
+  setInterval(cycleWords, 3000);
 }
 
 function initializeScrollToTop() {
