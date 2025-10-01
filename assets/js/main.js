@@ -10,11 +10,22 @@ async function initializeApp() {
   try {
     await loadProjectsData();
     const currentPage = getCurrentPage();
+    console.log('Current page detected as:', currentPage);
+    
     if (currentPage === 'index') {
       initializeHomePage();
     } else if (currentPage === 'projects') {
       initializeProjectsPage();
+    } else {
+      // Fallback: try to initialize typing animation anyway if elements exist
+      setTimeout(() => {
+        if (document.getElementById('typedText')) {
+          console.log('Fallback: initializing typing animation');
+          initializeTypingAnimation();
+        }
+      }, 1000);
     }
+    
     initializeNavigation();
     initializeSmoothScrolling();
     initializeScrollToTop();
@@ -30,9 +41,23 @@ async function loadProjectsData() {
   } catch (e) { console.warn('projects.json not found or invalid – continuing with static content.'); }
 }
 
-function getCurrentPage(){ return window.location.pathname.includes('projects.html') ? 'projects' : 'index'; }
+function getCurrentPage(){ 
+  const path = window.location.pathname;
+  if (path.includes('projects.html')) return 'projects';
+  if (path === '/' || path === '/index.html' || path.endsWith('index.html') || path.endsWith('/')) return 'index';
+  return 'other';
+}
 
-function initializeHomePage(){ loadFeaturedProjects(); loadSkills(); initializeAnimations(); initializeTypingAnimation(); }
+function initializeHomePage(){ 
+  console.log('Initializing home page...');
+  loadFeaturedProjects(); 
+  loadSkills(); 
+  initializeAnimations(); 
+  // Delay typing animation to ensure DOM is ready
+  setTimeout(() => {
+    initializeTypingAnimation();
+  }, 500);
+}
 function initializeProjectsPage(){ loadAllProjects(); initializeProjectFilters(); }
 
 function loadFeaturedProjects(){ if(!projectsData) return; const c=document.getElementById('featuredProjects'); if(!c) return; c.innerHTML=''; projectsData.slice(0,6).forEach(p=>{const card=createProjectCard(p); const col=document.createElement('div'); col.className='col-lg-4 col-md-6 mb-4'; col.appendChild(card); c.appendChild(col);});}
@@ -53,40 +78,41 @@ function initializeTypingAnimation() {
   const textEl = document.getElementById('typedText');
   const cursor = document.getElementById('cursor');
   
-  if (!textEl || !cursor) return;
+  if (!textEl || !cursor) {
+    console.log('Elements not found: typedText or cursor');
+    return;
+  }
   
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let isPaused = false;
   
   function typeEffect() {
     const currentWord = words[wordIndex];
     
-    if (isPaused) {
-      isPaused = false;
-      setTimeout(typeEffect, 2000);
-      return;
-    }
-    
     if (isDeleting) {
+      // Deleting characters
       textEl.textContent = currentWord.substring(0, charIndex - 1);
       charIndex--;
       
       if (charIndex === 0) {
+        // Finished deleting, move to next word
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(typeEffect, 500);
+        setTimeout(typeEffect, 500); // Brief pause before starting next word
         return;
       }
     } else {
+      // Typing characters
       textEl.textContent = currentWord.substring(0, charIndex + 1);
       charIndex++;
       
       if (charIndex === currentWord.length) {
-        isPaused = true;
-        isDeleting = true;
-        setTimeout(typeEffect, 2000);
+        // Finished typing word, pause then start deleting
+        setTimeout(() => {
+          isDeleting = true;
+          typeEffect();
+        }, 2000);
         return;
       }
     }
@@ -95,6 +121,7 @@ function initializeTypingAnimation() {
     setTimeout(typeEffect, speed);
   }
   
+  // Start the animation after a brief delay
   setTimeout(typeEffect, 1000);
 }
 
