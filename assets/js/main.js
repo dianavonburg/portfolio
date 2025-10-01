@@ -17,6 +17,7 @@ async function initializeApp() {
     }
     initializeNavigation();
     initializeSmoothScrolling();
+    initializeScrollToTop();
   } catch (e) { console.error(e); }
 }
 
@@ -31,7 +32,7 @@ async function loadProjectsData() {
 
 function getCurrentPage(){ return window.location.pathname.includes('projects.html') ? 'projects' : 'index'; }
 
-function initializeHomePage(){ loadFeaturedProjects(); loadSkills(); initializeAnimations(); initializeNameTypingAnimation(); }
+function initializeHomePage(){ loadFeaturedProjects(); loadSkills(); initializeAnimations(); initializeTypingAnimation(); }
 function initializeProjectsPage(){ loadAllProjects(); initializeProjectFilters(); }
 
 function loadFeaturedProjects(){ if(!projectsData) return; const c=document.getElementById('featuredProjects'); if(!c) return; c.innerHTML=''; projectsData.slice(0,6).forEach(p=>{const card=createProjectCard(p); const col=document.createElement('div'); col.className='col-lg-4 col-md-6 mb-4'; col.appendChild(card); c.appendChild(col);});}
@@ -47,7 +48,75 @@ function initializeSmoothScrolling(){ document.querySelectorAll('a[href^="#"]').
 
 function initializeAnimations(){ const opts={threshold:.1, rootMargin:'0px 0px -50px 0px'}; const obs=new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('animate__fadeInUp'); } }); }, opts); document.querySelectorAll('.project-card, .skill-category, .about-content').forEach(el=>obs.observe(el)); }
 
-function initializeNameTypingAnimation(){ const nameText='Diana von Burg'; const nameEl=document.getElementById('typedName'); const cursor=document.getElementById('cursor'); if(!nameEl||!cursor) return; let idx=0; nameEl.textContent=''; let vis=true; const blink=()=>{ cursor.style.opacity=vis?'1':'0'; vis=!vis; }; const timer=setInterval(blink,530); (function type(){ if(idx<nameText.length){ nameEl.textContent+=nameText.charAt(idx++); setTimeout(type,140);} else { setTimeout(()=>{ clearInterval(timer); cursor.style.opacity='0'; },1400);} })(); }
+function initializeTypingAnimation() {
+  const words = ['Creator', 'Designer', 'Storyteller'];
+  const textEl = document.getElementById('typedText');
+  const cursor = document.getElementById('cursor');
+  
+  if (!textEl || !cursor) return;
+  
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let isPaused = false;
+  
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+    
+    if (isPaused) {
+      isPaused = false;
+      setTimeout(typeEffect, 2000);
+      return;
+    }
+    
+    if (isDeleting) {
+      textEl.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeEffect, 500);
+        return;
+      }
+    } else {
+      textEl.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      
+      if (charIndex === currentWord.length) {
+        isPaused = true;
+        isDeleting = true;
+        setTimeout(typeEffect, 2000);
+        return;
+      }
+    }
+    
+    const speed = isDeleting ? 50 : 100;
+    setTimeout(typeEffect, speed);
+  }
+  
+  setTimeout(typeEffect, 1000);
+}
+
+function initializeScrollToTop() {
+  const scrollBtn = document.getElementById('scrollToTop');
+  if (!scrollBtn) return;
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
 // Inject small helper CSS
 const extraCSS=`.animate__fadeInUp{animation:fadeInUp .6s ease forwards}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}.navbar-scrolled{background:rgba(17,24,39,.98)!important;box-shadow:0 2px 10px rgba(0,0,0,.1)}#typedName{min-height:1em}`; const s=document.createElement('style'); s.textContent=extraCSS; document.head.appendChild(s);
