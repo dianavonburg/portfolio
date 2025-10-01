@@ -74,7 +74,7 @@ function initializeSmoothScrolling(){ document.querySelectorAll('a[href^="#"]').
 function initializeAnimations(){ const opts={threshold:.1, rootMargin:'0px 0px -50px 0px'}; const obs=new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('animate__fadeInUp'); } }); }, opts); document.querySelectorAll('.project-card, .skill-category, .about-content').forEach(el=>obs.observe(el)); }
 
 function initializeTypingAnimation() {
-  const words = ['Design', 'Photography', 'Videography', 'Innovation'];
+  const words = ['Designer', 'Photographer', 'Videographer', 'Innovator'];
   const textEl = document.getElementById('typedText');
   
   if (!textEl) {
