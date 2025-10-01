@@ -12,18 +12,18 @@ async function initializeApp() {
     const currentPage = getCurrentPage();
     console.log('Current page detected as:', currentPage);
     
+    // Always try to initialize typing animation if element exists
+    setTimeout(() => {
+      if (document.getElementById('typedText')) {
+        console.log('Initializing typing animation');
+        initializeTypingAnimation();
+      }
+    }, 500);
+    
     if (currentPage === 'index') {
       initializeHomePage();
     } else if (currentPage === 'projects') {
       initializeProjectsPage();
-    } else {
-      // Fallback: try to initialize typing animation anyway if elements exist
-      setTimeout(() => {
-        if (document.getElementById('typedText')) {
-          console.log('Fallback: initializing typing animation');
-          initializeTypingAnimation();
-        }
-      }, 1000);
     }
     
     initializeNavigation();
@@ -43,6 +43,7 @@ async function loadProjectsData() {
 
 function getCurrentPage(){ 
   const path = window.location.pathname;
+  console.log('Current path:', path);
   if (path.includes('projects.html')) return 'projects';
   if (path === '/' || path === '/index.html' || path.endsWith('index.html') || path.endsWith('/')) return 'index';
   return 'other';
@@ -74,9 +75,11 @@ function initializeSmoothScrolling(){ document.querySelectorAll('a[href^="#"]').
 function initializeAnimations(){ const opts={threshold:.1, rootMargin:'0px 0px -50px 0px'}; const obs=new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('animate__fadeInUp'); } }); }, opts); document.querySelectorAll('.project-card, .skill-category, .about-content').forEach(el=>obs.observe(el)); }
 
 function initializeTypingAnimation() {
+  console.log('initializeTypingAnimation called');
   const words = ['Designer', 'Photographer', 'Videographer', 'Innovator'];
   const textEl = document.getElementById('typedText');
   
+  console.log('textEl found:', textEl);
   if (!textEl) {
     console.log('typedText element not found');
     return;
@@ -85,6 +88,7 @@ function initializeTypingAnimation() {
   let currentWordIndex = 0;
   
   function cycleWords() {
+    console.log('Cycling to word:', words[currentWordIndex]);
     // Fade out
     textEl.style.opacity = '0';
     
@@ -99,11 +103,17 @@ function initializeTypingAnimation() {
   }
   
   // Add smooth transition
-  textEl.style.transition = 'opacity 0.3s ease';
-  textEl.textContent = words[0];
+  textEl.style.transition = 'opacity 0.3s ease-in-out';
   
-  // Start cycling
-  setInterval(cycleWords, 3000);
+  // Set initial text immediately
+  textEl.textContent = words[0];
+  console.log('Set initial text to:', words[0]);
+  
+  // Start cycling after a short delay
+  setTimeout(() => {
+    console.log('Starting animation cycle');
+    setInterval(cycleWords, 3000);
+  }, 2000);
 }
 
 function initializeScrollToTop() {
